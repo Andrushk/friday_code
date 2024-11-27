@@ -1,2 +1,2 @@
-# friday_code
-Meetup materials we hold on Fridays
+# Пятничный митап
+Материалы наших встреч по пятницам (код, презентации и т.п.)
