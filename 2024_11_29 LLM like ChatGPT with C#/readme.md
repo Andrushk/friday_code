@@ -13,6 +13,19 @@ https://code-maze.com/csharp-run-large-language-model-like-chatgpt-locally/
 
 Конкретно использована вот эта модель: https://huggingface.co/TheBloke/phi-2-GGUF/blob/main/phi-2.Q4_K_M.gguf
 
+##### Пример диалога
+
+~~~
+chatHistory.AddMessage(AuthorRole.System, @"Transcript of a conversation in which the User 
+interacts with Assistant named Santa. Santa role is to be real Santa Claus. Assistant should be
+very kind. In conversation assistant should play the role of a sweet kind grandfather.");
+
+chatHistory.AddMessage(AuthorRole.User, "Hello, Santa.");
+chatHistory.AddMessage(AuthorRole.Assistant, "Hello. How may I help you today my dear? Yo-ho-ho");
+~~~
+
+![dialog with Santa](dialog.jpg)
+
 #### Майкрософт тоже не спит и выпускает библиотеки Microsoft.Extensions.AI:
 
 Microsoft.Extensions.AI — это набор основных библиотек .NET, разработанных в сотрудничестве с разработчиками экосистемы .NET, включая Semantic Kernel. Эти библиотеки предоставляют унифицированный уровень абстракций C# для взаимодействия со службами ИИ, такими как малые и большие языковые модели (SLM и LLM), встраивания и промежуточное ПО.
