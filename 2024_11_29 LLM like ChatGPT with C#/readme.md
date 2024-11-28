@@ -13,7 +13,7 @@ https://code-maze.com/csharp-run-large-language-model-like-chatgpt-locally/
 
 Конкретно использована вот эта модель: https://huggingface.co/TheBloke/phi-2-GGUF/blob/main/phi-2.Q4_K_M.gguf
 
-#### Майкрософт тоже не спит и выпускает библиотеки Microsoft.Extensions.AI:
+### Майкрософт тоже не спит и выпускает библиотеки Microsoft.Extensions.AI:
 
 Microsoft.Extensions.AI — это набор основных библиотек .NET, разработанных в сотрудничестве с разработчиками экосистемы .NET, включая Semantic Kernel. Эти библиотеки предоставляют унифицированный уровень абстракций C# для взаимодействия со службами ИИ, такими как малые и большие языковые модели (SLM и LLM), встраивания и промежуточное ПО.
 
