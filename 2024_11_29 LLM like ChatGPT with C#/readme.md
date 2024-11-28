@@ -10,6 +10,7 @@ https://code-maze.com/csharp-run-large-language-model-like-chatgpt-locally/
 * dotnet add package LLamaSharp.Backend.Cpu --version 0.11.2
 
 Плюс ссылка на репо моделей: https://huggingface.co/
+
 Конкретно использована вот эта модель: https://huggingface.co/TheBloke/phi-2-GGUF/blob/main/phi-2.Q4_K_M.gguf
 
 #### Майкрософт тоже не спит и выпускает библиотеки Microsoft.Extensions.AI:
