@@ -35,17 +35,39 @@ Console.ForegroundColor = ConsoleColor.Yellow;
 Console.Write("The chat session has started.\nUser: ");
 Console.ForegroundColor = ConsoleColor.Green;
 string userInput = Console.ReadLine() ?? "";
+
 while (userInput != "exit")
 {
+    var cancelTokenSource = new CancellationTokenSource();
+    var token = cancelTokenSource.Token;
+
     await foreach (
         var text
         in session.ChatAsync(
             new ChatHistory.Message(AuthorRole.User, userInput),
-            inferenceParams))
+            inferenceParams, token))
     {
+        if (token.IsCancellationRequested) break;
+
+        // Чтобы прервать вывод текста (если ИИ несет) можно нажать F2
+        if (Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.F2)
+        {
+            cancelTokenSource.Cancel();
+        }
+
         Console.ForegroundColor = ConsoleColor.White;
         Console.Write(text);
+
     }
+
+    if (token.IsCancellationRequested)
+    {
+        Console.WriteLine();
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine("Cancelled");
+        Console.WriteLine();
+    }
+
     Console.ForegroundColor = ConsoleColor.Green;
     userInput = Console.ReadLine() ?? "";
 }
