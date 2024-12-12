@@ -32,3 +32,9 @@ Microsoft.Extensions.AI — это набор основных библиоте�
 
 * https://devblogs.microsoft.com/dotnet/introducing-microsoft-extensions-ai-preview/
 * https://devblogs.microsoft.com/semantic-kernel/microsoft-extensions-ai-simplifying-ai-integration-for-net-partners/
+
+
+### Т-банк выложил свои БЯМы в открытый доступ
+
+* https://huggingface.co/t-tech
+* https://www.tbank.ru/about/news/11122024-the-t-technologies-group-has-introduced-the-worlds-most-efficient-open-large-language-models-in-russian/?utm_source=smm_tbank
